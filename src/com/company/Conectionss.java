@@ -5,11 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conectionss {
+    private static String dbUrl = "jdbc:sqlserver://localhost;database=BikeStores";
+    private static String username= "sa";
+    private  static String password= "Vsevolod25";
+    private static    Connection conn = null;
+
     public static Connection getConnection() {
-        String dbUrl = "jdbc:sqlserver://localhost;database=BikeStores";
-        String username= "sa";
-        String password= "Vsevolod25";
-        Connection conn = null;
+
         try {
             conn = DriverManager.getConnection(dbUrl, username , password );
             if (conn != null) {
