@@ -6,7 +6,7 @@ public class Select {
 
    public Connection connection = null;
     public void baseSelect() {
-      //  new Conectionss().getConnection();
+
         try {
             connection = Conectionss.getConnection();
             String sql = "SELECT * FROM sales.customers ";
