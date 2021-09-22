@@ -15,9 +15,7 @@ public class Connections {
 
         try {
             conn = DriverManager.getConnection(dbUrl, username, password);
-            if (conn != null) {
 
-            }
         } catch (
                 SQLException ex) {
             ex.printStackTrace();
