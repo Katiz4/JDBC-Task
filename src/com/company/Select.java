@@ -6,9 +6,9 @@ public class Select {
 
    public Connection connection = null;
     public void baseSelect() {
-      //  new Conectionss().getConnection();
-        try {
-            connection = Conectionss.getConnection();
+
+            try {
+            connection = Connections.getConnection();
             String sql = "SELECT * FROM sales.customers ";
             Statement statement = connection.createStatement();
             ResultSet result = statement.executeQuery(sql);
@@ -26,7 +26,7 @@ public class Select {
 
     public void conditionalSelect() {
         try {
-            connection = Conectionss.getConnection();
+            connection = Connections.getConnection();
             String sql = "SELECT category_id, category_name from production.categories where category_id between 55 and 65";
             Statement statement = connection.createStatement();
             ResultSet result = statement.executeQuery(sql);

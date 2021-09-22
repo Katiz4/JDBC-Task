@@ -5,19 +5,22 @@ import java.sql.*;
 public class Update {
 
     public Connection connection = null;
+
     public void updateCategory() {
         try {
-            connection = Conectionss.getConnection();
-            Statement statement = connection.createStatement();
+            connection = Connections.getConnection();
 
-            int rowsUpdated = statement.executeUpdate("Update production.categories set category_name = 'Lada-Kalina' where category_id = 59 ");
+            Statement statement = connection.createStatement();
+            new Select().conditionalSelect();
+            int rowsUpdated = statement.executeUpdate("Update production.categories set category_name = 'Lada-KaLina' where category_id = 59 ");
             if (rowsUpdated > 0) {
-                System.out.println("The data was updated successfully!");
+                System.out.println("The category name (nr. 59, Nisan) was updated successfully!");
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        new Select().conditionalSelect();
     }
 }
 
