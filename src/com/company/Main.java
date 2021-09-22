@@ -11,14 +11,14 @@ public class Main {
         }
 
         /* executes a SELECT ALL query */
-        // new Select().baseSelect();
+      // new Select().baseSelect();
 
         /* executes a SELECT query with condition */
         //new Select().conditionalSelect();
 
 
         /* executes an INSERT query */
-        // new Insert().crudInsert();
+       //new Insert().crudInsert();
 
         /* executes an UPDATE query */
         // new Update().updateCategory();
@@ -27,7 +27,7 @@ public class Main {
         //new Delete().crudDelete();
 
         /* executes a BULK INSERT from a .csv file */
-       // new BulkInsert().crudBulkInsert();
+      new BulkInsert().crudBulkInsert();
 
 
     }

@@ -9,7 +9,7 @@ public class Select {
 
             try {
             connection = Connections.getConnection();
-            String sql = "SELECT * FROM sales.customers ";
+            String sql = "SELECT top 100 * FROM sales.customers order by customer_id desc ";
             Statement statement = connection.createStatement();
             ResultSet result = statement.executeQuery(sql);
 
